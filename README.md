@@ -1,6 +1,6 @@
 # FireStealer - 窃火者
 
-**中文** [English](https://github.com/shaokeyibb/TyporaWordPressImageUploader/blob/master/README_EN.MD)
+**中文** [English](https://github.com/shaokeyibb/FireStealer/blob/master/README_EN.md)
 
 > 燃素说（英语：Phlogiston theory），是一个已被取代的化学理论，起源于17世纪。这个理论假设，任何物质在燃烧时，都会释放出一种名叫燃素（Phlogiston）的成分。 —— [燃素说 - 维基百科](https://zh.wikipedia.org/zh-cn/燃素说)
 

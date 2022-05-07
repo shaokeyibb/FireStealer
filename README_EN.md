@@ -1,6 +1,6 @@
 # FireStealer - 窃火者
 
-[中文](https://github.com/shaokeyibb/TyporaWordPressImageUploader/blob/master/README.MD) **English**
+[中文](https://github.com/shaokeyibb/FireStealer/blob/master/README.md) **English**
 
 > The phlogiston theory is a superseded scientific theory that postulated the existence of a fire-like element called phlogiston (/flɒˈdʒɪstən, floʊ-, -ɒn/)[1][2] contained within combustible bodies and released during combustion. —— [[Phlogiston theory - Wikipedia](https://en.wikipedia.org/wiki/Phlogiston_theory)
 
