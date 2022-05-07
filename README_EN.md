@@ -24,6 +24,6 @@ FireStealer is a magical Forge Mod based on phlogiston theory. We started from t
 2. the compiled mod file in the `./build/libs` folder
 
 ## License
-
+ 
 FireStealer is licensed under the [GNU General Public License v3.0 (GPLv3)](https://github.com/shaokeyibb/firestealer/blob/master/LICENSE)
 
