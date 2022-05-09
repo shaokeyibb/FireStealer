@@ -1,0 +1,14 @@
+{
+  "conditions": [
+    {
+      "condition": "firestealer:has_block_tag",
+      "tag": "#forge:ores"
+    },
+    {
+      "condition": "firestealer:has_block_tag",
+      "tag": "#forge:ores/coal",
+      "reversed": true
+    }
+  ],
+  "type": "firestealer:ore_drops"
+}

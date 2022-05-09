@@ -1,0 +1,22 @@
+{
+  "type": "firestealer:phlogiston_bottle_drops",
+  "conditions": [
+    {
+      "condition": "minecraft:entity_properties",
+      "predicate": {
+        "type": "#firestealer:undead_mobs"
+      },
+      "entity": "this"
+    },
+    {
+      "condition": "minecraft:damage_source_properties",
+      "predicate": {
+        "is_fire": true
+      }
+    },
+    {
+      "condition": "random_chance",
+      "chance": 0.2
+    }
+  ]
+}
