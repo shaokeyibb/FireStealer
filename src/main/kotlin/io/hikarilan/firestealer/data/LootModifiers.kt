@@ -3,7 +3,9 @@ package io.hikarilan.firestealer.data
 import com.google.gson.JsonObject
 import io.hikarilan.firestealer.FireStealerMod
 import io.hikarilan.firestealer.items.FireStealerItems
+import net.minecraft.core.Registry
 import net.minecraft.resources.ResourceLocation
+import net.minecraft.tags.TagKey
 import net.minecraft.world.item.ItemStack
 import net.minecraft.world.level.storage.loot.LootContext
 import net.minecraft.world.level.storage.loot.parameters.LootContextParams
@@ -56,7 +58,11 @@ object LootModifiers {
         LootModifier(conditionsIn) {
 
         override fun doApply(generatedLoot: List<ItemStack>, context: LootContext): List<ItemStack> {
-            return listOf(ItemStack(context.getParam(LootContextParams.BLOCK_STATE).block.asItem()))
+           return if (generatedLoot.all { it.`is`(TagKey.create(Registry.ITEM_REGISTRY, ResourceLocation("forge:raw_ores"))) }){
+               generatedLoot
+           }else{
+               listOf(ItemStack(context.getParam(LootContextParams.BLOCK_STATE).block.asItem()))
+           }
         }
 
         class Serializer :
