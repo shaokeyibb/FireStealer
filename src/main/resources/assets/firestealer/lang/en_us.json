@@ -3,5 +3,6 @@
   "firestealer.text.interact_furnace_blocks_when_not_unlocked_fire": "Ignorance of human beings, the fire of gods, it is not your turn to intervene!",
   "item.firestealer.phlogiston_bottle": "Phlogiston bottle",
   "item.firestealer.mortar": "Mortar",
-  "item.firestealer.pulverized_coal": "Pulverized coal"
+  "item.firestealer.pulverized_coal": "Pulverized coal",
+  "block.firestealer.phlogiston_rich_sand": "Phlogiston-rich sand"
 }

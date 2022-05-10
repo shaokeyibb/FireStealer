@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "firestealer:block/phlogiston_rich_sand"
+      },
+      {
+        "model": "firestealer:block/phlogiston_rich_sand",
+        "y": 90
+      },
+      {
+        "model": "firestealer:block/phlogiston_rich_sand",
+        "y": 180
+      },
+      {
+        "model": "firestealer:block/phlogiston_rich_sand",
+        "y": 270
+      }
+    ]
+  }
+}

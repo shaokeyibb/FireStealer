@@ -1,0 +1,28 @@
+{
+  "parent": "firestealer:recipes/root",
+  "rewards": {
+    "recipes": [
+      "firestealer:phlogiston_rich_sand"
+    ]
+  },
+  "criteria": {
+    "has_phlogiston_bottle_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "firestealer:phlogiston_bottle"
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "firestealer:phlogiston_rich_sand"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_phlogiston_bottle_recipe",
+      "has_the_recipe"
+    ]
+  ]
+}

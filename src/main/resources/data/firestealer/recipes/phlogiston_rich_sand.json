@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "forge:sand"
+    },
+    {
+      "tag": "forge:sand"
+    },
+    {
+      "item": "firestealer:phlogiston_bottle"
+    }
+  ],
+  "result": {
+    "item": "firestealer:phlogiston_rich_sand",
+    "count": 1
+  }
+}

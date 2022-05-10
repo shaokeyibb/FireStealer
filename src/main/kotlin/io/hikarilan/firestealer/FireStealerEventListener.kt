@@ -2,6 +2,7 @@ package io.hikarilan.firestealer
 
 import io.hikarilan.firestealer.capability.IPlayerCapability
 import io.hikarilan.firestealer.capability.PlayerCapabilityProvider
+import io.hikarilan.firestealer.items.IFireReplaceable
 import net.minecraft.ChatFormatting
 import net.minecraft.Util
 import net.minecraft.core.Registry
@@ -11,6 +12,7 @@ import net.minecraft.server.level.ServerPlayer
 import net.minecraft.tags.TagKey
 import net.minecraft.world.damagesource.DamageSource
 import net.minecraft.world.entity.Entity
+import net.minecraft.world.entity.item.ItemEntity
 import net.minecraft.world.level.Explosion
 import net.minecraft.world.level.block.Blocks
 import net.minecraftforge.common.capabilities.CapabilityManager
@@ -18,6 +20,7 @@ import net.minecraftforge.common.capabilities.CapabilityToken
 import net.minecraftforge.event.AttachCapabilitiesEvent
 import net.minecraftforge.event.TickEvent
 import net.minecraftforge.event.TickEvent.WorldTickEvent
+import net.minecraftforge.event.entity.EntityLeaveWorldEvent
 import net.minecraftforge.event.entity.player.PlayerInteractEvent
 import net.minecraftforge.eventbus.api.SubscribeEvent
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber
@@ -89,6 +92,36 @@ object FireStealerEventListener {
 
         // 18000+(已经获得火种的（在线）玩家人数/总玩家人数)*6000
         (e.world as ServerLevel).dayTime = (18000 + playersUnlockTheFire.toDouble() / playersOnline * 6000).toLong()
+    }
+
+    @SubscribeEvent
+    fun onFireReplace(e: EntityLeaveWorldEvent) {
+        val entity = e.entity
+        val world = e.world
+
+        if (entity !is ItemEntity) return
+
+        val item = entity.item.item
+
+        if (item !is IFireReplaceable) return
+
+        if (!entity.isOnFire) return
+
+        val replace = (item as IFireReplaceable).onFireReplace(world, entity) ?: return
+
+        val pos = entity.position()
+
+        if (!world.isClientSide && world is ServerLevel) {
+            world.addFreshEntity(
+                ItemEntity(
+                    world,
+                    pos.x,
+                    pos.y,
+                    pos.z,
+                    replace
+                )
+            )
+        }
     }
 
 }

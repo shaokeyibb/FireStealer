@@ -26,4 +26,9 @@ object FireStealerItems {
         Item(Item.Properties().tab(FireStealerMod.creativeModeTab).rarity(Rarity.COMMON))
     }
 
+    // 富燃素沙子（BlockItem）
+    val PHLOGISTON_RICH_SAND_ITEM by REGISTRY.registerObject("phlogiston_rich_sand"){
+        PhlogistonRichSandItem()
+    }
+
 }

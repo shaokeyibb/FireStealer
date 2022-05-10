@@ -1,5 +1,6 @@
 package io.hikarilan.firestealer
 
+import io.hikarilan.firestealer.blocks.FireStealerBlocks
 import io.hikarilan.firestealer.capability.IPlayerCapability
 import io.hikarilan.firestealer.data.LootModifiers
 import io.hikarilan.firestealer.items.FireStealerItems
@@ -47,6 +48,7 @@ object FireStealerMod {
     }
 
     init {
+        FireStealerBlocks.REGISTRY.register(MOD_BUS)
         FireStealerItems.REGISTRY.register(MOD_BUS)
         LootModifiers.REGISTRY.register(MOD_BUS)
     }
