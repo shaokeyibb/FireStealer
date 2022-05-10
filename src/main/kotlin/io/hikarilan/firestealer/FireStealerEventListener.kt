@@ -4,9 +4,11 @@ import io.hikarilan.firestealer.capability.IPlayerCapability
 import io.hikarilan.firestealer.capability.PlayerCapabilityProvider
 import net.minecraft.ChatFormatting
 import net.minecraft.Util
+import net.minecraft.core.Registry
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.server.level.ServerLevel
 import net.minecraft.server.level.ServerPlayer
+import net.minecraft.tags.TagKey
 import net.minecraft.world.damagesource.DamageSource
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.level.Explosion
@@ -36,9 +38,9 @@ object FireStealerEventListener {
 
         if (level.isClientSide()) return
 
-        val block = level.getBlockState(e.pos).block
+        val state = level.getBlockState(e.pos)
 
-        if (block !in FireStealerMod.furnaceBlocks) return
+        if (!state.`is`(TagKey.create(Registry.BLOCK_REGISTRY, ResourceLocation("forge:furnaces")))) return
 
         val capability = player.getCapability(CapabilityManager.get(object : CapabilityToken<IPlayerCapability>() {}))
 
