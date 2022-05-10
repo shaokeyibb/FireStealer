@@ -3,13 +3,10 @@ package io.hikarilan.firestealer.items
 import io.hikarilan.firestealer.FireStealerMod
 import net.minecraft.world.item.Item
 import net.minecraft.world.item.Rarity
-import net.minecraftforge.api.distmarker.Dist
-import net.minecraftforge.fml.common.Mod.EventBusSubscriber
 import net.minecraftforge.registries.DeferredRegister
 import net.minecraftforge.registries.ForgeRegistries
 import thedarkcolour.kotlinforforge.forge.registerObject
 
-@EventBusSubscriber(Dist.CLIENT, modid = FireStealerMod.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
 object FireStealerItems {
 
     val REGISTRY = DeferredRegister.create(ForgeRegistries.ITEMS, FireStealerMod.MOD_ID)
