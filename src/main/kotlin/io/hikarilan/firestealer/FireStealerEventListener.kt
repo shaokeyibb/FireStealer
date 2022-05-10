@@ -12,6 +12,7 @@ import net.minecraft.tags.TagKey
 import net.minecraft.world.damagesource.DamageSource
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.level.Explosion
+import net.minecraft.world.level.block.Blocks
 import net.minecraftforge.common.capabilities.CapabilityManager
 import net.minecraftforge.common.capabilities.CapabilityToken
 import net.minecraftforge.event.AttachCapabilitiesEvent
@@ -50,6 +51,8 @@ object FireStealerEventListener {
         e.isCanceled = true
 
         val hitLoc = e.hitVec.location
+
+        player.level.setBlockAndUpdate(e.pos, Blocks.AIR.defaultBlockState())
 
         level.explode(
             null,
