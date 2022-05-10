@@ -1,0 +1,41 @@
+{
+  "parent": "firestealer:recipes/root",
+  "rewards": {
+    "recipes": [
+      "firestealer:pulverized_coal"
+    ]
+  },
+  "criteria": {
+    "has_coal": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "minecraft:coals"
+          }
+        ]
+      }
+    },
+    "has_mortar_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "firestealer:mortar"
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "firestealer:pulverized_coal"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_coal",
+      "has_the_recipe"
+    ],
+    [
+      "has_mortar_recipe"
+    ]
+  ]
+}

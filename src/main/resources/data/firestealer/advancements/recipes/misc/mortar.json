@@ -1,0 +1,43 @@
+{
+  "parent": "firestealer:recipes/root",
+  "rewards": {
+    "recipes": [
+      "firestealer:mortar"
+    ]
+  },
+  "criteria": {
+    "has_stick": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:stick"
+          }
+        ]
+      }
+    },
+    "has_bowl": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:bowl"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "firestealer:mortar"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_stick",
+      "has_bowl",
+      "has_the_recipe"
+    ]
+  ]
+}
