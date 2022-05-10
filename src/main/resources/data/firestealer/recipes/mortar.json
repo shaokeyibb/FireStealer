@@ -1,16 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "X",
-    "#"
+    "#X#",
+    "# #",
+    " # "
   ],
   "key": {
     "X": {
-      "item": "minecraft:stick"
+      "item": "minecraft:flint"
     },
     "#": [
       {
-        "item": "minecraft:bowl"
+        "item": "minecraft:cobblestone"
       }
     ]
   },

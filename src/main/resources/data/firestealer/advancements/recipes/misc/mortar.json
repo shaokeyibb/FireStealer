@@ -6,22 +6,22 @@
     ]
   },
   "criteria": {
-    "has_stick": {
+    "has_flint": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "minecraft:stick"
+            "item": "minecraft:flint"
           }
         ]
       }
     },
-    "has_bowl": {
+    "has_cobblestone": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "minecraft:bowl"
+            "item": "minecraft:cobblestone"
           }
         ]
       }
@@ -35,8 +35,8 @@
   },
   "requirements": [
     [
-      "has_stick",
-      "has_bowl",
+      "has_flint",
+      "has_cobblestone",
       "has_the_recipe"
     ]
   ]
