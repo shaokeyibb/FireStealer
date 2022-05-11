@@ -23,7 +23,7 @@ object FireStealerItems {
 
     // 煤粉
     val PULVERIZED_COAL by REGISTRY.registerObject("pulverized_coal") {
-        Item(Item.Properties().tab(FireStealerMod.creativeModeTab).rarity(Rarity.COMMON))
+        PulverizedCoalItem()
     }
 
     // 富燃素沙子（BlockItem）
