@@ -32,11 +32,9 @@ class PhlogistonRichRawOreRecipe(pId: ResourceLocation) : CustomRecipe(pId) {
     override fun matches(pContainer: CraftingContainer, pLevel: Level): Boolean {
         return (0 until pContainer.containerSize)
             .map { pContainer.getItem(it) }
-            .filter { it.item == FireStealerItems.PHLOGISTON_BOTTLE }
-            .toList()
-            .let { list ->
-                list.size == 1
-            } && (0 until pContainer.containerSize)
+            .singleOrNull { it.item == FireStealerItems.PHLOGISTON_BOTTLE }
+            .let { it != null }
+                && (0 until pContainer.containerSize)
             .map { pContainer.getItem(it) }
             .filter { it != ItemStack.EMPTY && it.item != FireStealerItems.PHLOGISTON_BOTTLE }
             .filter {
