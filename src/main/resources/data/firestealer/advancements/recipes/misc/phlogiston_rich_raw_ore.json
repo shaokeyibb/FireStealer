@@ -2,7 +2,7 @@
   "parent": "firestealer:recipes/root",
   "rewards": {
     "recipes": [
-      "firestealer:mortar"
+      "firestealer:phlogiston_rich_raw_ore"
     ]
   },
   "criteria": {

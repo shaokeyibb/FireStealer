@@ -1,0 +1,43 @@
+{
+  "parent": "firestealer:recipes/root",
+  "rewards": {
+    "recipes": [
+      "firestealer:pulverized_coal_flask"
+    ]
+  },
+  "criteria": {
+    "has_pulverized_coal": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "firestealer:pulverized_coal"
+          }
+        ]
+      }
+    },
+    "has_glass_bottle": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:glass_bottle"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "firestealer:pulverized_coal_flask"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_pulverized_coal",
+      "has_glass_bottle",
+      "has_the_recipe"
+    ]
+  ]
+}

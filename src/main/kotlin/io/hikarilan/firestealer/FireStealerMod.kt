@@ -2,12 +2,14 @@ package io.hikarilan.firestealer
 
 import io.hikarilan.firestealer.blocks.FireStealerBlocks
 import io.hikarilan.firestealer.capability.IPlayerCapability
+import io.hikarilan.firestealer.crafting.PhlogistonBottleBrewingRecipe
 import io.hikarilan.firestealer.crafting.PhlogistonRichRawOreRecipe
 import io.hikarilan.firestealer.data.LootModifiers
 import io.hikarilan.firestealer.items.FireStealerItems
 import io.hikarilan.firestealer.loot.FireStealerLoots
 import net.minecraft.world.item.CreativeModeTab
 import net.minecraft.world.item.ItemStack
+import net.minecraftforge.common.brewing.BrewingRecipeRegistry
 import net.minecraftforge.common.capabilities.RegisterCapabilitiesEvent
 import net.minecraftforge.eventbus.api.SubscribeEvent
 import net.minecraftforge.fml.common.Mod
@@ -45,6 +47,8 @@ object FireStealerMod {
     fun onFMLCommonSetup(e: FMLCommonSetupEvent) {
         e.enqueueWork {
             FireStealerLoots.init()
+
+            BrewingRecipeRegistry.addRecipe(PhlogistonBottleBrewingRecipe())
         }
     }
 

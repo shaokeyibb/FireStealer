@@ -17,23 +17,28 @@ object FireStealerItems {
     }
 
     // 研钵
-    val MORTAR by REGISTRY.registerObject("mortar"){
+    val MORTAR by REGISTRY.registerObject("mortar") {
         MortarItem()
     }
 
     // 煤粉
-    val PULVERIZED_COAL by REGISTRY.registerObject("pulverized_coal"){
+    val PULVERIZED_COAL by REGISTRY.registerObject("pulverized_coal") {
         Item(Item.Properties().tab(FireStealerMod.creativeModeTab).rarity(Rarity.COMMON))
     }
 
     // 富燃素沙子（BlockItem）
-    val PHLOGISTON_RICH_SAND_ITEM by REGISTRY.registerObject("phlogiston_rich_sand"){
+    val PHLOGISTON_RICH_SAND_ITEM by REGISTRY.registerObject("phlogiston_rich_sand") {
         PhlogistonRichSandItem()
     }
 
     // 富燃素粗矿
-    val PHLOGISTON_RICH_RAW_ORE by REGISTRY.registerObject("phlogiston_rich_raw_ore"){
+    val PHLOGISTON_RICH_RAW_ORE by REGISTRY.registerObject("phlogiston_rich_raw_ore") {
         PhlogistonRichRawOreItem()
+    }
+
+    // 煤粉烧瓶
+    val PULVERIZED_COAL_FLASK by REGISTRY.registerObject("pulverized_coal_flask") {
+        PulverizedCoalFlaskItem()
     }
 
 }
