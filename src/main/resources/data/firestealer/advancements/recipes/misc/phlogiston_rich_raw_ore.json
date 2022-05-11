@@ -1,0 +1,28 @@
+{
+  "parent": "firestealer:recipes/root",
+  "rewards": {
+    "recipes": [
+      "firestealer:mortar"
+    ]
+  },
+  "criteria": {
+    "has_phlogiston_bottle_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "firestealer:phlogiston_bottle"
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "firestealer:phlogiston_rich_raw_ore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_phlogiston_bottle_recipe",
+      "has_the_recipe"
+    ]
+  ]
+}

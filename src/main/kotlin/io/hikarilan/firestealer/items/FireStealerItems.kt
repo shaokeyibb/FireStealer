@@ -31,4 +31,9 @@ object FireStealerItems {
         PhlogistonRichSandItem()
     }
 
+    // 富燃素粗矿
+    val PHLOGISTON_RICH_RAW_ORE by REGISTRY.registerObject("phlogiston_rich_raw_ore"){
+        PhlogistonRichRawOreItem()
+    }
+
 }
