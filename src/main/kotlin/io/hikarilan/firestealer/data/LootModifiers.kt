@@ -18,7 +18,7 @@ import thedarkcolour.kotlinforforge.forge.registerObject
 
 object LootModifiers {
 
-    val REGISTRY = DeferredRegister.create(ForgeRegistries.Keys.LOOT_MODIFIER_SERIALIZERS, FireStealerMod.MOD_ID)
+    val REGISTRY: DeferredRegister<GlobalLootModifierSerializer<*>> = DeferredRegister.create(ForgeRegistries.Keys.LOOT_MODIFIER_SERIALIZERS, FireStealerMod.MOD_ID)
 
     private val PHLOGISTON_BOTTLE_DROPS by REGISTRY.registerObject("phlogiston_bottle_drops") {
         PhlogistonBottleDropsLootModifiers.Serializer()

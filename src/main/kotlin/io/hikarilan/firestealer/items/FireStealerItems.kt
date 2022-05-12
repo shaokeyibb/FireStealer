@@ -9,7 +9,7 @@ import thedarkcolour.kotlinforforge.forge.registerObject
 
 object FireStealerItems {
 
-    val REGISTRY = DeferredRegister.create(ForgeRegistries.ITEMS, FireStealerMod.MOD_ID)
+    val REGISTRY: DeferredRegister<Item> = DeferredRegister.create(ForgeRegistries.ITEMS, FireStealerMod.MOD_ID)
 
     // 燃素瓶
     val PHLOGISTON_BOTTLE: Item by REGISTRY.registerObject("phlogiston_bottle") {
