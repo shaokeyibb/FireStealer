@@ -6,6 +6,7 @@
   "item.firestealer.pulverized_coal": "煤粉",
   "item.firestealer.pulverized_coal_flask": "煤粉烧瓶",
   "item.firestealer.phlogiston_rich_raw_ore": "富燃素粗矿",
+  "item.firestealer.phlogiston_rich_raw_ore.tooltip": "内含矿物: %s",
   "block.firestealer.phlogiston_rich_sand": "富燃素沙子",
   "block.firestealer.glowstone_torch": "荧光炬",
   "block.firestealer.glowstone_wall_torch": "墙上的荧光炬"

@@ -6,6 +6,7 @@
   "item.firestealer.pulverized_coal": "Pulverized coal",
   "item.firestealer.pulverized_coal_flask": "Pulverized coal flask",
   "item.firestealer.phlogiston_rich_raw_ore": "Phlogiston-rich raw ore",
+  "item.firestealer.phlogiston_rich_raw_ore.tooltip": "ore include: %s",
   "block.firestealer.phlogiston_rich_sand": "Phlogiston-rich sand",
   "block.firestealer.glowstone_torch": "Glowstone torch",
   "block.firestealer.glowstone_wall_torch": "Wall glowstone torch"
