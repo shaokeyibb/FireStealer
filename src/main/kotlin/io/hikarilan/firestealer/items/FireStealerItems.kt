@@ -1,8 +1,10 @@
 package io.hikarilan.firestealer.items
 
 import io.hikarilan.firestealer.FireStealerMod
+import io.hikarilan.firestealer.blocks.FireStealerBlocks
 import net.minecraft.world.item.Item
 import net.minecraft.world.item.Rarity
+import net.minecraft.world.item.StandingAndWallBlockItem
 import net.minecraftforge.registries.DeferredRegister
 import net.minecraftforge.registries.ForgeRegistries
 import thedarkcolour.kotlinforforge.forge.registerObject
@@ -39,6 +41,14 @@ object FireStealerItems {
     // 煤粉烧瓶
     val PULVERIZED_COAL_FLASK by REGISTRY.registerObject("pulverized_coal_flask") {
         PulverizedCoalFlaskItem()
+    }
+
+    // 荧光炬（BlockItem）
+    val GLOWSTONE_TORCH_ITEM by REGISTRY.registerObject("glowstone_torch") {
+        StandingAndWallBlockItem(
+            FireStealerBlocks.GLOWSTONE_TORCH, FireStealerBlocks.GLOWSTONE_WALL_TORCH,
+            Item.Properties().tab(FireStealerMod.creativeModeTab)
+        )
     }
 
 }

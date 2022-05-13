@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "firestealer:block/glowstone_torch"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "firestealer:block/glowstone_wall_torch"
+    },
+    "facing=north": {
+      "model": "firestealer:block/glowstone_wall_torch",
+      "y": 270
+    },
+    "facing=south": {
+      "model": "firestealer:block/glowstone_wall_torch",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "firestealer:block/glowstone_wall_torch",
+      "y": 180
+    }
+  }
+}
