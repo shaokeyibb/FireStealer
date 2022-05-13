@@ -21,7 +21,7 @@ object FireStealerBlocks {
 
     // 富燃素沙子
     val PHLOGISTON_RICH_SAND by REGISTRY.registerObject("phlogiston_rich_sand") {
-        SandBlock(14406560, BlockBehaviour.Properties.of(Material.SAND).strength(0.5F).sound(SoundType.SAND))
+        SandBlock(14406560, BlockBehaviour.Properties.of(Material.SAND).strength(0.5F).sound(SoundType.SAND).lightLevel { 7 })
     }
 
     // 荧光炬
