@@ -7,7 +7,14 @@
   "item.firestealer.pulverized_coal_flask": "煤粉烧瓶",
   "item.firestealer.phlogiston_rich_raw_ore": "富燃素粗矿",
   "item.firestealer.phlogiston_rich_raw_ore.tooltip": "内含矿物: %s",
+  "item.firestealer.light_weighted_element": "轻质元素",
+  "item.firestealer.light_weighted_element_ingot": "轻质元素锭",
+  "item.firestealer.light_weighted_element_helmet": "轻质元素头盔",
+  "item.firestealer.light_weighted_element_chestplate": "轻质元素胸甲",
+  "item.firestealer.light_weighted_element_leggings": "轻质元素护腿",
+  "item.firestealer.light_weighted_element_boots": "轻质元素靴子",
   "block.firestealer.phlogiston_rich_sand": "富燃素沙子",
   "block.firestealer.glowstone_torch": "荧光炬",
-  "block.firestealer.glowstone_wall_torch": "墙上的荧光炬"
+  "block.firestealer.glowstone_wall_torch": "墙上的荧光炬",
+  "block.firestealer.light_weighted_element_block": "轻质元素块"
 }

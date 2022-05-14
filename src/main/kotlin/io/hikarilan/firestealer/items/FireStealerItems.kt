@@ -2,9 +2,9 @@ package io.hikarilan.firestealer.items
 
 import io.hikarilan.firestealer.FireStealerMod
 import io.hikarilan.firestealer.blocks.FireStealerBlocks
-import net.minecraft.world.item.Item
-import net.minecraft.world.item.Rarity
-import net.minecraft.world.item.StandingAndWallBlockItem
+import io.hikarilan.firestealer.materials.FireStealerMaterials
+import net.minecraft.world.entity.EquipmentSlot
+import net.minecraft.world.item.*
 import net.minecraftforge.registries.DeferredRegister
 import net.minecraftforge.registries.ForgeRegistries
 import thedarkcolour.kotlinforforge.forge.registerObject
@@ -50,5 +50,45 @@ object FireStealerItems {
             Item.Properties().tab(FireStealerMod.creativeModeTab)
         )
     }
+
+    // 轻质元素
+    val LIGHT_WEIGHTED_ELEMENT by REGISTRY.registerObject("light_weighted_element") {
+        Item(Item.Properties().tab(FireStealerMod.creativeModeTab).rarity(Rarity.COMMON))
+    }
+
+    // 轻质元素锭
+    val LIGHT_WEIGHTED_ELEMENT_INGOT by REGISTRY.registerObject("light_weighted_element_ingot") {
+        Item(Item.Properties().tab(FireStealerMod.creativeModeTab).rarity(Rarity.COMMON))
+    }
+
+    // 轻质元素块（BlockItem）
+    val LIGHT_WEIGHTED_ELEMENT_BLOCK by REGISTRY.registerObject("light_weighted_element_block") {
+        BlockItem(
+            FireStealerBlocks.LIGHT_WEIGHTED_ELEMENT_BLOCK,
+            Item.Properties().tab(FireStealerMod.creativeModeTab).rarity(Rarity.COMMON)
+        )
+    }
+
+    val LIGHT_WEIGHTED_ELEMENT_HELMET by REGISTRY.registerObject("light_weighted_element_helmet") {
+        ArmorItem(
+            FireStealerMaterials.LIGHT_WEIGHTED_ELEMENT_ARMOR_MATERIAL, EquipmentSlot.HEAD, Item.Properties().tab(FireStealerMod.creativeModeTab)
+        )
+    }
+    val LIGHT_WEIGHTED_ELEMENT_CHESTPLATE by REGISTRY.registerObject("light_weighted_element_chestplate") {
+        ArmorItem(
+            FireStealerMaterials.LIGHT_WEIGHTED_ELEMENT_ARMOR_MATERIAL, EquipmentSlot.CHEST, Item.Properties().tab(FireStealerMod.creativeModeTab)
+        )
+    }
+    val LIGHT_WEIGHTED_ELEMENT_LEGGINGS by REGISTRY.registerObject("light_weighted_element_leggings") {
+        ArmorItem(
+            FireStealerMaterials.LIGHT_WEIGHTED_ELEMENT_ARMOR_MATERIAL, EquipmentSlot.LEGS, Item.Properties().tab(FireStealerMod.creativeModeTab)
+        )
+    }
+    val LIGHT_WEIGHTED_ELEMENT_BOOTS by REGISTRY.registerObject("light_weighted_element_boots") {
+        ArmorItem(
+            FireStealerMaterials.LIGHT_WEIGHTED_ELEMENT_ARMOR_MATERIAL, EquipmentSlot.FEET, Item.Properties().tab(FireStealerMod.creativeModeTab)
+        )
+    }
+
 
 }

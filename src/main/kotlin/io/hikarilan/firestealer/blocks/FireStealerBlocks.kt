@@ -1,6 +1,7 @@
 package io.hikarilan.firestealer.blocks
 
 import io.hikarilan.firestealer.FireStealerMod
+import io.hikarilan.firestealer.materials.FireStealerMaterials
 import net.minecraft.client.renderer.ItemBlockRenderTypes
 import net.minecraft.client.renderer.RenderType
 import net.minecraft.core.particles.ParticleTypes
@@ -34,6 +35,11 @@ object FireStealerBlocks {
     val GLOWSTONE_WALL_TORCH by REGISTRY.registerObject("glowstone_wall_torch") {
         WallTorchBlock(BlockBehaviour.Properties.of(Material.DECORATION).noCollission().instabreak().lightLevel { 14 }
             .sound(SoundType.WOOD).lootFrom { GLOWSTONE_TORCH }, ParticleTypes.GLOW)
+    }
+
+    // 轻质元素块
+    val LIGHT_WEIGHTED_ELEMENT_BLOCK by REGISTRY.registerObject("light_weighted_element_block"){
+        Block(BlockBehaviour.Properties.of(FireStealerMaterials.LIGHT_WEIGHTED_ELEMENT_MATERIAL).strength(0.3F).sound(SoundType.GLASS))
     }
 
     @SubscribeEvent

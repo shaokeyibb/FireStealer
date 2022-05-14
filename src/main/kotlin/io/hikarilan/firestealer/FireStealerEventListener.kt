@@ -3,6 +3,7 @@ package io.hikarilan.firestealer
 import io.hikarilan.firestealer.capability.IPlayerCapability
 import io.hikarilan.firestealer.capability.PlayerCapabilityProvider
 import io.hikarilan.firestealer.items.IFireReplaceable
+import io.hikarilan.firestealer.materials.FireStealerMaterials
 import net.minecraft.ChatFormatting
 import net.minecraft.Util
 import net.minecraft.core.Registry
@@ -11,14 +12,18 @@ import net.minecraft.server.level.ServerLevel
 import net.minecraft.server.level.ServerPlayer
 import net.minecraft.tags.TagKey
 import net.minecraft.world.damagesource.DamageSource
+import net.minecraft.world.effect.MobEffectInstance
+import net.minecraft.world.effect.MobEffects
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.entity.item.ItemEntity
+import net.minecraft.world.item.ArmorItem
 import net.minecraft.world.level.Explosion
 import net.minecraft.world.level.block.Blocks
 import net.minecraftforge.common.capabilities.CapabilityManager
 import net.minecraftforge.common.capabilities.CapabilityToken
 import net.minecraftforge.event.AttachCapabilitiesEvent
 import net.minecraftforge.event.TickEvent
+import net.minecraftforge.event.TickEvent.PlayerTickEvent
 import net.minecraftforge.event.TickEvent.WorldTickEvent
 import net.minecraftforge.event.entity.EntityLeaveWorldEvent
 import net.minecraftforge.event.entity.player.PlayerInteractEvent
@@ -122,6 +127,17 @@ object FireStealerEventListener {
                 )
             )
         }
+    }
+
+    @SubscribeEvent
+    fun onPlayerWearFullLightWeightedElementArmor(e: PlayerTickEvent) {
+        if (!e.side.isServer || e.player !is ServerPlayer) return
+        if (e.phase != TickEvent.Phase.END) return
+
+        if (e.player.inventory.armor.any { it.item !is ArmorItem || (it.item as ArmorItem).material != FireStealerMaterials.LIGHT_WEIGHTED_ELEMENT_ARMOR_MATERIAL }) return
+
+        e.player.addEffect(MobEffectInstance(MobEffects.JUMP, 200, 1, false, false, true))
+        e.player.addEffect(MobEffectInstance(MobEffects.SLOW_FALLING, 200, 0, false, false, true))
     }
 
 }
