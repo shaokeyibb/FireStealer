@@ -9,16 +9,20 @@ import io.hikarilan.firestealer.items.FireStealerItems
 import io.hikarilan.firestealer.loot.FireStealerLoots
 import net.minecraft.world.item.CreativeModeTab
 import net.minecraft.world.item.ItemStack
+import net.minecraftforge.common.ForgeConfigSpec
 import net.minecraftforge.common.brewing.BrewingRecipeRegistry
 import net.minecraftforge.common.capabilities.RegisterCapabilitiesEvent
 import net.minecraftforge.eventbus.api.SubscribeEvent
+import net.minecraftforge.fml.ModLoadingContext
 import net.minecraftforge.fml.common.Mod
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber
+import net.minecraftforge.fml.config.ModConfig
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent
 import net.minecraftforge.forge.event.lifecycle.GatherDataEvent
 import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
 import thedarkcolour.kotlinforforge.forge.MOD_BUS
+
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 @Mod(FireStealerMod.MOD_ID)
@@ -57,6 +61,11 @@ object FireStealerMod {
         FireStealerItems.REGISTRY.register(MOD_BUS)
         LootModifiers.REGISTRY.register(MOD_BUS)
         PhlogistonRichRawOreRecipe.REGISTRY.register(MOD_BUS)
+
+        val (first, second)
+                = ForgeConfigSpec.Builder().configure { Configuration.Common(it) }
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, second)
+        Configuration.COMMON_CONFIG = first
     }
 
 }

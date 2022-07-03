@@ -85,6 +85,7 @@ object FireStealerEventListener {
     fun onTimeChange(e: WorldTickEvent) {
         if (!e.side.isServer || e.world !is ServerLevel) return
         if (e.phase != TickEvent.Phase.END) return
+        if (Configuration.COMMON_CONFIG.disableTimeChange.get()) return
         val playersOnline = e.world.server!!.playerCount
 
         val playersUnlockTheFire = e.world.server!!.playerList.players.count { player ->
