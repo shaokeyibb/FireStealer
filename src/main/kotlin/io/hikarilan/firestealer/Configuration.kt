@@ -18,6 +18,11 @@ object Configuration {
             .comment("Disable time change")
             .define("disableTimeChange", false)
 
+        val disableFurnaceExplode: ForgeConfigSpec.BooleanValue = builder
+            .comment("Disable furnace explode")
+            .define("disableFurnaceExplode", true)
+
+
         init {
             builder.pop()
         }
