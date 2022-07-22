@@ -46,6 +46,8 @@ object FireStealerEventListener {
         val level = player.level
 
         if (level.isClientSide()) return
+        if (Configuration.COMMON_CONFIG.disableFurnaceExplode.get()) return
+
 
         val state = level.getBlockState(e.pos)
 
